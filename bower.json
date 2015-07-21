@@ -1,0 +1,14 @@
+{
+  "name": "coreweb-css",
+  "version": "0.0.1",
+  "homepage": "https://github.com/hilotus/coreweb-css",
+  "authors": [
+    "Luo Wei <luowei---010101@163.com>"
+  ],
+  "description": "coreweb css frameworks",
+  "keywords": [
+    "coreweb",
+    "css"
+  ],
+  "license": "MIT"
+}

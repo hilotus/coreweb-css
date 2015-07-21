@@ -1,0 +1,132 @@
+$helveti-cal-color-gray: #949494;
+$helveti-cal-color-light-gray: #D2D2D4;
+$helveti-cal-color-black: #4A4B47;
+$helveti-cal-color-orange: #EA6E60;
+$helveti-cal-color-white: #FFFFFF;
+
+.em-helveti-cal {
+  padding: 20px;
+  width: 100%;
+  font-size: 14px;
+  color: $helveti-cal-color-black;
+  @include user-select(none);
+
+  .cal-title {
+    margin-bottom: 20px;
+
+    .cal-title-left {
+      width: 30%;
+      text-align: center;
+      display: inline-block
+    }
+
+    .cal-title-right {
+      width: 60%;
+      display: inline-block
+    }
+
+    .cal-title-left {
+      .cal-title-date {
+        color: $helveti-cal-color-gray;
+        font-size: 48px;
+        line-height: 48px;
+        margin-bottom: 10px
+      }
+      .cal-title-month {
+        font-size: 18px;
+        line-height: 18px
+      }
+    }
+    .cal-title-right {
+      .cal-title-year {
+        text-align: right;
+        height: 24px;
+        line-height: 24px;
+        font-size: 24px;
+        .cal-title-cn-year { font-size: 16px }
+      }
+      .cal-title-monthes {
+        color: $helveti-cal-color-gray;
+        list-style: none;
+        font-size: 12px;
+        li {
+          display: inline-block;
+          text-align: center;
+          padding: 4px 6px 4px 6px;
+          cursor: pointer
+        }
+        li.sel, li:hover { color: $helveti-cal-color-orange }
+      }
+    }
+  }
+  .cal-body {
+    width: 100%;
+    margin-top: 30px;
+
+    table {
+      width: 100%;
+      td {
+        font-size: 12px;
+        text-align: center
+      }
+      thead {
+        font-weight: bold;
+        td { padding-bottom: 20px }
+      }
+      tbody {
+        .cal-past-month, .cal-next-month { color: $helveti-cal-color-light-gray }
+        td {
+          cursor: pointer;
+          color: $helveti-cal-color-gray;
+          padding-bottom: 12px;
+          span { line-height: 24px }
+        }
+        td span:before {
+          border-radius: 24px;
+          width: 24px;
+          height: 24px;
+          display: inline-block;
+          content: attr(data-date)
+        }
+        td span:after {
+          display: block;
+          content: attr(data-cn-date)
+        }
+        td.cal-sel-date span, td.cal-today span, td span:hover {
+          &:before {
+            color: $helveti-cal-color-white;
+            background: $helveti-cal-color-orange;
+            @include box-sizing(content-box)
+          }
+        }
+      }
+      .cal-holiday {
+        color: $helveti-cal-color-orange
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .em-helveti-cal {
+    .cal-title {
+      .cal-title-left {
+        .cal-title-date {
+          font-size: 64px;
+          line-height: 64px
+        }
+        .cal-title-month { font-size: 24px }
+      }
+      .cal-title-right {
+        .cal-title-year {
+          height: 48px;
+          font-size: 48px;
+          line-height: 48px;
+          .cal-title-cn-year { font-size: 24px }
+        }
+      }
+    }
+
+    .cal-body { margin-top: 50px }
+  }
+}
