@@ -1,7 +1,7 @@
 input[type=text],input[type=email],input[type=password],input[type=url],input[type=search],textarea {
   display: inline-block;
   vertical-align: top;
-  padding: 0 7px;
+  padding: 2 7px;
   height: 29px;
   color: #666;
   background: white;
@@ -332,4 +332,16 @@ input.invalid:after {
 
 .lt-ie9 .valid:before,.lt-ie9 .valid:after,.lt-ie9 .invalid:before,.lt-ie9 .invalid:after {
   display: none
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+}
+.form-control[disabled], .form-control[readonly] {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+.form-control[disabled] {
+  cursor: not-allowed;
 }
