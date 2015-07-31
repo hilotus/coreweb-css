@@ -1,0 +1,80 @@
+.panel {
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  @include box-shadow(0 1px 1px rgba(0, 0, 0, .05));
+}
+.panel-body {
+  padding: 10px;
+}
+.panel-heading {
+  padding: 5px 10px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.panel-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 15px;
+  color: inherit;
+}
+.panel-title > a,
+.panel-title > small,
+.panel-title > .small,
+.panel-title > small > a,
+.panel-title > .small > a {
+  color: inherit;
+}
+.panel-footer {
+  padding: 5px 10px;
+  border-top: 1px solid transparent;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.panel-default {
+  border-color: #dadef2 #ced8ee #c2ceec;
+}
+.panel-default > .panel-heading {
+  color: #555;
+  border-color: #dadef2 #ced8ee #c2ceec;
+  @include background-image(linear-gradient(to bottom, #f4f6fc, #e2e6f8));
+}
+.panel-default > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #dadef2 #ced8ee #c2ceec;
+}
+.panel-default > .panel-heading .badge {
+  color: #555;
+  @include background-image(linear-gradient(to bottom, #f4f6fc, #e2e6f8));
+}
+.panel-default > .panel-footer {
+  @include background-image(linear-gradient(to bottom, #f4f6fc, #e2e6f8));
+  border-color: #dadef2 #ced8ee #c2ceec;
+}
+.panel-default > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #dadef2 #ced8ee #c2ceec;
+}
+.panel-primary {
+  border-color: #1d87e2 #187ed9 #1670c1;
+}
+.panel-primary > .panel-heading {
+  color: #fff;
+  background-color: #2c92ed;
+  border-color: #1d87e2 #187ed9 #1670c1;
+}
+.panel-primary > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #1d87e2 #187ed9 #1670c1;
+}
+.panel-primary > .panel-heading .badge {
+  color: #fff;
+  background-color: #2c92ed;
+}
+.panel-primary > .panel-footer {
+  color: #fff;
+  background-color: #2c92ed;
+  border-color: #1d87e2 #187ed9 #1670c1;
+}
+.panel-primary > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #1d87e2 #187ed9 #1670c1;
+}

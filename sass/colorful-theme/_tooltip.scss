@@ -1,0 +1,118 @@
+.tooltip {
+  position: absolute;
+  z-index: 10;
+  padding: 4px 10px;
+  max-width: 200px;
+  line-height: 20px;
+  font-size: 11px;
+  color: white;
+  text-align: center;
+  text-shadow: 0 1px black;
+  background: #3b3c40;
+  background-clip: padding-box;
+  border: 1px solid #19191b;
+  border-bottom-color: #0a0a0b;
+  border-radius: 3px;
+  background-image: -webkit-linear-gradient(top, #585a60,#3b3c40);
+  background-image: -moz-linear-gradient(top, #585a60,#3b3c40);
+  background-image: -o-linear-gradient(top, #585a60,#3b3c40);
+  background-image: linear-gradient(to bottom, #585a60,#3b3c40);
+  -webkit-box-shadow: inset 0 1px rgba(255,255,255,0.1),inset 0 0 0 1px rgba(255,255,255,0.1),0 1px 2px rgba(0,0,0,0.2);
+  box-shadow: inset 0 1px rgba(255,255,255,0.1),inset 0 0 0 1px rgba(255,255,255,0.1),0 1px 2px rgba(0,0,0,0.2)
+}
+
+.tooltip:before,.tooltip:after,.tooltip>p:before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent
+}
+
+.tooltip>p:before {
+  z-index: 2
+}
+
+.tooltip-up:before,.tooltip-up:after,.tooltip-up>p:before {
+  left: 50%;
+  margin-left: -6px
+}
+
+.tooltip-up:before {
+  bottom: -12px;
+  border-top-color: #0a0a0b
+}
+
+.tooltip-up:after {
+  bottom: -11px;
+  border-top-color: #53555b
+}
+
+.tooltip-up>p:before {
+  bottom: -10px;
+  border-top-color: #3b3c40
+}
+
+.tooltip-down:before,.tooltip-down:after,.tooltip-down>p:before {
+  left: 50%;
+  margin-left: -6px
+}
+
+.tooltip-down:before {
+  top: -12px;
+  border-bottom-color: #161718
+}
+
+.tooltip-down:after {
+  top: -11px;
+  border-bottom-color: #787a82
+}
+
+.tooltip-down>p:before {
+  top: -10px;
+  border-bottom-color: #585a60
+}
+
+.tooltip-left:before,.tooltip-left:after,.tooltip-left>p:before {
+  top: 50%;
+  margin-top: -6px
+}
+
+.tooltip-left:before {
+  left: -12px;
+  border-right-color: #161718
+}
+
+.tooltip-left:after {
+  left: -11px;
+  border-right-color: #606168
+}
+
+.tooltip-left>p:before {
+  left: -10px;
+  border-right-color: #4a4b50
+}
+
+.tooltip-right:before,.tooltip-right:after,.tooltip-right>p:before {
+  top: 50%;
+  margin-top: -6px
+}
+
+.tooltip-right:before {
+  right: -12px;
+  border-left-color: #161718
+}
+
+.tooltip-right:after {
+  right: -11px;
+  border-left-color: #606168
+}
+
+.tooltip-right>p:before {
+  right: -10px;
+  border-left-color: #4a4b50
+}
+
+.lt-ie9 .tooltip:after {
+  content: none
+}

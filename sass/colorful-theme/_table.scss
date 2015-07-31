@@ -1,0 +1,185 @@
+.table {
+  width: 100%;
+  line-height: 29px;
+  text-align: left;
+  background: white;
+  border-collapse: separate;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.06)
+}
+
+.table-head>tr>th {
+  padding: 0 10px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 1px rgba(0,0,0,0.2);
+  background: #2c92ed;
+  border-width: 1px 1px 1px 0;
+  border-style: solid;
+  border-color: #1d87e2 #187ed9 #1670c1;
+  background-image: -webkit-linear-gradient(top, #49a4fc,#208be7);
+  background-image: -moz-linear-gradient(top, #49a4fc,#208be7);
+  background-image: -o-linear-gradient(top, #49a4fc,#208be7);
+  background-image: linear-gradient(to bottom, #49a4fc,#208be7);
+  -webkit-box-shadow: inset 0 1px rgba(255,255,255,0.2),inset 0 0 0 1px rgba(255,255,255,0.06),0 1px rgba(0,0,0,0.04);
+  box-shadow: inset 0 1px rgba(255,255,255,0.2),inset 0 0 0 1px rgba(255,255,255,0.06),0 1px rgba(0,0,0,0.04)
+}
+
+.table-head>tr>th:first-child {
+  border-left-width: 1px;
+  border-top-left-radius: 3px
+}
+
+.table-head>tr>th:last-child {
+  border-top-right-radius: 3px
+}
+
+.table-body>tr:nth-child(2n) {
+  background: #f9f9f9
+}
+
+.table-body>tr:hover {
+  background: #f4f4f4
+}
+
+.table-body>tr>td {
+  padding: 0 10px;
+  text-shadow: 0 1px white;
+  word-break: break-all;
+  max-width: 250px;
+  border-right: 1px solid #eee;
+  border-right-color: rgba(0,0,0,0.07)
+}
+
+.table-body>tr>td:first-child {
+  border-left: 1px solid #d2d2d2
+}
+
+.table-body>tr>td:last-child {
+  border-right-color: #d2d2d2
+}
+
+.table-foot>tr>td {
+  position: relative;
+  line-height: 26px;
+  padding-left: 9px;
+  font-size: 11px;
+  color: #777;
+  text-shadow: 0 1px rgba(255,255,255,0.5);
+  background: #f4f4f4;
+  border-width: 1px 1px 1px 0;
+  border-style: solid;
+  border-color: #dbdbdb #d2d2d2 #ccc;
+  background-image: -webkit-linear-gradient(top, #fbfbfb,#ededed);
+  background-image: -moz-linear-gradient(top, #fbfbfb,#ededed);
+  background-image: -o-linear-gradient(top, #fbfbfb,#ededed);
+  background-image: linear-gradient(to bottom, #fbfbfb,#ededed);
+  -webkit-box-shadow: inset 0 1px #fff,inset 0 0 0 1px rgba(255,255,255,0.2);
+  box-shadow: inset 0 1px #fff,inset 0 0 0 1px rgba(255,255,255,0.2)
+}
+
+.table-foot>tr>td:first-child {
+  border-left-width: 1px;
+  border-bottom-left-radius: 3px
+}
+
+.table-foot>tr>td:last-child {
+  border-bottom-right-radius: 3px
+}
+
+.table-pager {
+  float: right
+}
+
+.table-pager-link {
+  float: left;
+  position: relative;
+  overflow: hidden;
+  width: 26px;
+  height: 26px;
+  font: 0/0 serif;
+  color: transparent;
+  cursor: pointer;
+  border-left: 1px solid #ddd;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-box-shadow: inset 1px 0 rgba(255,255,255,0.2),-1px 0 rgba(255,255,255,0.2);
+  box-shadow: inset 1px 0 rgba(255,255,255,0.2),-1px 0 rgba(255,255,255,0.2)
+}
+
+.table-pager-link:hover {
+  background: #f2f2f2;
+  background: rgba(0,0,0,0.015)
+}
+
+.table-pager-link:hover:after {
+  border-color: transparent #777
+}
+
+.table-pager-link:active {
+  background: #eee;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.03),0 -1px rgba(0,0,0,0.02),-1px 0 rgba(255,255,255,0.2);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.03),0 -1px rgba(0,0,0,0.02),-1px 0 rgba(255,255,255,0.2)
+}
+
+.table-pager-link:active:after {
+  border-color: transparent #999
+}
+
+.table-pager-link:before,.table-pager-link:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -4px 0 0 -2px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent #909090
+}
+
+.table-pager-link:before {
+  margin-top: -3px;
+  border-color: transparent rgba(255,255,255,0.5)
+}
+
+.table-pager-link.prev:before,.table-pager-link.prev:after {
+  border-width: 4px 4px 4px 0
+}
+
+.table-pager-link.next:before,.table-pager-link.next:after {
+  border-width: 4px 0 4px 4px
+}
+
+.table-pager-link.first:before,.table-pager-link.first:after {
+  border-width: 4px 4px 4px 0
+}
+.table-pager-link.first span {
+  display: block;
+  border-left: 1px #909090 solid;
+  position: relative;
+  left: 10px;
+  top: 9px;
+  width: 1px;
+  height: 8px;
+}
+
+.table-pager-link.last:before,.table-pager-link.last:after {
+  border-width: 4px 0 4px 4px
+}
+.table-pager-link.last span {
+  display: block;
+  border-left: 1px #909090 solid;
+  position: relative;
+  left: 15px;
+  top: 9px;
+  width: 1px;
+  height: 8px;
+}
+
+.table-pager-link:last-child {
+  border-bottom-right-radius: 2px
+}
