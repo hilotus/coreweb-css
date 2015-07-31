@@ -1,7 +1,7 @@
 input[type=text],input[type=email],input[type=password],input[type=url],input[type=search],textarea {
   display: inline-block;
   vertical-align: top;
-  padding: 2 7px;
+  padding: 0 7px;
   height: 29px;
   color: #666;
   background: white;
@@ -344,4 +344,8 @@ input.invalid:after {
 }
 .form-control[disabled] {
   cursor: not-allowed;
+}
+
+.form-group {
+  margin-bottom: 15px;
 }
