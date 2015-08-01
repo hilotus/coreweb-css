@@ -2,6 +2,7 @@
   position: relative;
   line-height: 29px;
   padding: 0 10px;
+  margin-bottom: 15px;
   border: 1px solid transparent;
   border-radius: 3px;
   text-shadow: 0 1px rgba(255,255,255,0.5);
@@ -13,30 +14,21 @@
   color: #526e4f;
   background: #bff1bc;
   border-color: #98cf9f #98cf9f #8ec397;
-  background-image: -webkit-linear-gradient(top, #cef4d0,#b2eeaa);
-  background-image: -moz-linear-gradient(top, #cef4d0,#b2eeaa);
-  background-image: -o-linear-gradient(top, #cef4d0,#b2eeaa);
-  background-image: linear-gradient(to bottom, #cef4d0,#b2eeaa)
+  @include background-image(linear-gradient(to bottom, #cef4d0,#b2eeaa))
 }
 
-.alert.alert-error {
+.alert.alert-danger {
   color: #833230;
   background: #fbd3c4;
   border-color: #e55d48 #e5725a #e5725a;
-  background-image: -webkit-linear-gradient(top, #f7dcd2,#edbbaa);
-  background-image: -moz-linear-gradient(top, #f7dcd2,#edbbaa);
-  background-image: -o-linear-gradient(top, #f7dcd2,#edbbaa);
-  background-image: linear-gradient(to bottom, #f7dcd2,#edbbaa)
+  @include background-image(linear-gradient(to bottom, #f7dcd2,#edbbaa))
 }
 
-.alert.alert-warn {
+.alert.alert-warning {
   color: #6b6a5a;
   background: #fcf0b0;
   border-color: #d7cd89 #d7cd89 #cec986;
-  background-image: -webkit-linear-gradient(top, #fef5bd,#faeca4);
-  background-image: -moz-linear-gradient(top, #fef5bd,#faeca4);
-  background-image: -o-linear-gradient(top, #fef5bd,#faeca4);
-  background-image: linear-gradient(to bottom, #fef5bd,#faeca4);
+  @include background-image(linear-gradient(to bottom, #fef5bd,#faeca4))
 }
 
 .alert-close {
@@ -46,11 +38,10 @@
   right: 0;
   margin-top: -9px;
   padding: inherit;
-  font: bold 18px/18px Arial, sans-serif;
   color: inherit;
   cursor: pointer;
   opacity: .75;
-  .fa {
+  .fa-times {
     font-size: 13px;
     position: relative;
     top: -2.5px

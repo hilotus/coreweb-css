@@ -99,6 +99,32 @@ a.btn {
   @include background-image(linear-gradient(to bottom, #cf3025,#fc4138))
 }
 
+.btn-link {
+  font-weight: 400;
+  color: #337ab7;
+  border-radius: 0
+}
+
+.btn-link, .btn-link:active, .btn-link:focus, .btn-link:hover {
+  border-color: transparent;
+}
+
+.btn-link, .btn-link.active, .btn-link:active, .btn-link[disabled] {
+  background-color: transparent;
+  @include box-shadow(none)
+}
+
+.btn-link:focus, .btn-link:hover {
+  color: #23527c;
+  text-decoration: underline;
+  background-color: transparent
+}
+
+.btn-link[disabled]:focus, .btn-link[disabled]:hover {
+  color:#777;
+  text-decoration:none
+}
+
 .btn-group {
   display: inline-block;
   vertical-align: top;
