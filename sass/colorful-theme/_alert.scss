@@ -41,11 +41,13 @@
   color: inherit;
   cursor: pointer;
   opacity: .75;
-  .fa-times {
-    font-size: 13px;
-    position: relative;
-    top: -2.5px
-  }
+}
+
+// with font awesome
+.alert-close .fa-times {
+  font-size: 13px;
+  position: relative;
+  top: -5px;
 }
 
 .alert-close:hover {
