@@ -1,6 +1,6 @@
 {
   "name": "coreweb-css",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "homepage": "https://github.com/hilotus/coreweb-css",
   "repository": {
     "type": "git",
@@ -14,6 +14,6 @@
     "coreweb",
     "css"
   ],
-  "ignore": [],
+  "ignore": ["config.rb", "Gemfile", "Gemfile.lock", "bin"],
   "license": "MIT"
 }
