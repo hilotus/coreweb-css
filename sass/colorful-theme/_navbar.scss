@@ -14,7 +14,7 @@
 
 .navbar>h1,.navbar>h2,.navbar>h3 {
   float: left;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   a { color: #555 }
   a:hover, a:active { text-decoration: none }
@@ -35,9 +35,8 @@
 }
 
 .navbar-links>li>a {
-  display: block;
   cursor: pointer;
-  padding: 0 11px;
+  padding: 5px 11px;
 
   img {
     width: 24px;
@@ -53,7 +52,7 @@
   color: #3e91ee
 }
 
-.navbar-links>li+li {
+.navbar-links>li+li>a {
   border-left: 1px solid #c9d3f2;
   border-left-color: rgba(183,192,223,0.6);
   @include box-shadow(inset 1px 0 rgba(255,255,255,0.2),-1px 0 rgba(255,255,255,0.2))
