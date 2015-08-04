@@ -167,8 +167,8 @@ input:checked+.checkbox:before,input:checked+.radio:before {
   position: absolute;
   top: 4px;
   left: 3px;
-  width: 7px;
-  height: 3px;
+  width: 10px;
+  height: 6px;
   border: solid #9b9795;
   border-width: 0 0 3px 3px;
   @include transform(rotate(-45deg))
