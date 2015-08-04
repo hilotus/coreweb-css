@@ -33,21 +33,17 @@
 
 .alert-close {
   display: block;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  margin-top: -9px;
   padding: inherit;
   color: inherit;
   cursor: pointer;
   opacity: .75;
+  right: 0;
+  @include centre("y")
 }
 
 // with font awesome
 .alert-close .fa-times {
   font-size: 13px;
-  position: relative;
-  top: -5px;
 }
 
 .alert-close:hover {
