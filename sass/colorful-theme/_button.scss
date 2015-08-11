@@ -274,3 +274,11 @@ a.btn {
     border-radius: 0 0 2px 2px
   }
 }
+
+.btn-group {
+  display: inline-block;
+  vertical-align: top;
+  height: 30px;
+  font-size: 0;
+  white-space: nowrap;
+}
