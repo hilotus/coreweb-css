@@ -12,8 +12,7 @@
   border-radius: 3px;
   cursor: pointer;
   @include box-sizing(border-box);
-  @include ellipsis();
-  outline: none
+  @include ellipsis()
 }
 
 .btn:disabled {
@@ -102,7 +101,8 @@ a.btn {
 .btn-link {
   font-weight: 400;
   color: #337ab7;
-  border-radius: 0
+  border-radius: 0;
+  outline: none
 }
 
 .btn-link, .btn-link:active, .btn-link:focus, .btn-link:hover {
