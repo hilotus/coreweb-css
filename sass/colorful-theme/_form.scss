@@ -1,6 +1,6 @@
 input[type=text],input[type=email],input[type=password],input[type=url],input[type=search],textarea {
   display: inline-block;
-  vertical-align: top;
+  // vertical-align: top;
   padding: 0 7px;
   height: 29px;
   color: #666;
@@ -348,4 +348,16 @@ input.invalid:after {
 
 .form-group {
   margin-bottom: 15px;
+}
+
+.form-validation {
+  display: inline-block;
+  .prompt {
+    max-width: 260px;
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 13px;
+    &.bad { color: #e45735 }
+    &.ok { color: #009900 }
+  }
 }

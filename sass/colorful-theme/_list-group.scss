@@ -5,10 +5,14 @@
 .list-group-item {
   position: relative;
   display: block;
-  padding: 10px 15px;
+  padding: 5px 10px;
   margin-bottom: -1px;
   background-color: #ffffff;
   border: 1px solid #dddddd;
+  .fa, i {
+    @include centre("y");
+    right: 6px;
+  }
 }
 .list-group-item:first-child {
   border-top-right-radius: 4px;
