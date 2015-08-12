@@ -3,7 +3,7 @@
   vertical-align: top;
   white-space: nowrap
 }
-.nav>.nav-header {
+.nav>.nav-header, .nav>.nav-footer {
   overflow: hidden;
   line-height: 33px;
   padding: 0 11px;
@@ -31,6 +31,7 @@
     }
   }
 }
+
 .nav>.nav-stacked {
   display: block;
   text-align: left;
@@ -64,4 +65,13 @@
 }
 .nav>.nav-stacked>li:last-child>a {
   border-radius: 0 0 2px 2px
+}
+
+.nav>.nav-footer {
+  border-radius: 0 0 3px 3px;
+  border-top-width: 0
+}
+
+.nav.has-footer>.nav-stacked {
+  border-radius: 0
 }
