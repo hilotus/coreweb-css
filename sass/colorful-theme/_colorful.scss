@@ -15,6 +15,26 @@
   }
 }
 
+body {
+  font: 12px/21px "Lucida Grande",Verdana,Arial,sans-seri;
+  color: #404040;
+  background: #fafaf4;
+}
+
+a {
+  color: #007fcc;
+  text-decoration: none
+}
+
+a:hover {
+  color: #0072ba;
+  text-decoration: underline
+}
+
+strong {
+  font-weight: bold
+}
+
 .center-vertical { @include centre("y") }
 .center-horizontal { @include centre("x") }
 .center { @include centre() }
@@ -33,18 +53,6 @@
 }
 .inline {
   display: inline !important
-}
-
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-*:before,
-*:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
 }
 [role="button"] {
   cursor: pointer;
