@@ -334,6 +334,10 @@ input.invalid:after {
   display: none
 }
 
+input[type='checkbox'] + label {
+  cursor: pointer;
+}
+
 .form-control {
   display: block;
   width: 100%;

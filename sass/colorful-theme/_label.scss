@@ -65,19 +65,3 @@ a.label:focus {
 .label-danger[href]:focus {
   background-color: #c9302c;
 }
-
-.h1, .h2, .h3, .h4, .h5, .h6 { display: block }
-.h1, .h2, .h3 {
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-.h4, .h5, .h6 {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-.h1>.label { font-size: 36px !important }
-.h2>.label { font-size: 30px !important }
-.h3>.label { font-size: 24px !important }
-.h4>.label { font-size: 18px !important }
-.h5>.label { font-size: 14px !important }
-.h6>.label { font-size: 12px !important }
