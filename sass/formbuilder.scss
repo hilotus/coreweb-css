@@ -11,6 +11,11 @@
   @include user-select(none)
 }
 
+.fb-main .del {
+  cursor: pointer;
+  color: #e74c3c;
+}
+
 .fb-clear {
   clear: both
 }

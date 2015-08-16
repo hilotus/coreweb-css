@@ -354,6 +354,10 @@ input[type='checkbox'] + label {
   margin-bottom: 15px;
 }
 
+.form-group-sm {
+  margin-bottom: 10px;
+}
+
 .form-validation {
   display: inline-block;
   .prompt {
@@ -363,5 +367,47 @@ input[type='checkbox'] + label {
     font-size: 13px;
     &.bad { color: #e45735 }
     &.ok { color: #009900 }
+  }
+}
+
+// Input group
+.input-group {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+
+  .form-control, .input-group-addon {
+    display: table-cell
+  }
+
+  .input-group-addon {
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    color: #555;
+    text-align: center;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 4px
+  }
+
+  .input-group-addon:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .input-group-addon:first-child {
+    border-right: 0;
+  }
+  .input-group-addon:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .input-group-addon:last-child {
+    border-left: 0;
+  }
+
+  .form-control:not(:first-child):not(:last-child), .input-group-addon:not(:first-child):not(:last-child) {
+    border-radius: 0;
   }
 }
