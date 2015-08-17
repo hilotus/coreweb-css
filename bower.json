@@ -14,6 +14,15 @@
     "coreweb",
     "css"
   ],
-  "ignore": ["config.rb", "Gemfile", "Gemfile.lock", "bin"],
-  "license": "MIT"
+  "ignore": [
+    "config.rb",
+    "Gemfile",
+    "Gemfile.lock",
+    "bin"
+  ],
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "font-awesome": "~4.4.0"
+  }
 }

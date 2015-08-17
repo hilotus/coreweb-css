@@ -1,0 +1,11 @@
+@import 'base';
+
+// $dp-border-color: #E8E8E8;
+// $dp-color: #3C262D;
+// $dp-today-bgcolor: #EEF6FF;
+// $dp-hover-bgcolor: #4366BC;
+// $dp-hover-color: #FFF;
+// $db-not-current-month-bgcolor: #E8E8E8;
+// $db-not-current-month-color: #B9B9B9;
+
+@include db-datepicker(#E8E8E8, #3C262D, #EEF6FF, #4366BC, #FFF, #E8E8E8, #B9B9B9);

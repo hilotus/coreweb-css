@@ -1,0 +1,106 @@
+@import "compass/css3";
+@import "compass/css3/user-interface";
+@import "compass/typography/text/ellipsis";
+
+@mixin db-datepicker($dp-border-color, $dp-color, $dp-today-bgcolor, $dp-hover-bgcolor, $dp-hover-color, $db-not-current-month-bgcolor, $db-not-current-month-color) {
+  .dp {
+    max-width: 200px;
+    color: $dp-color;
+    border: 1px solid $dp-border-color;
+    font-size: 12px;
+
+    .dp-title {
+      height: 25px;
+      line-height: 25px;
+      text-align: center;
+      position: relative;
+      border-bottom: 1px solid $dp-border-color;
+
+      span { font-size: 13px; }
+
+      .db-next {
+        position: absolute;
+        left: 10px;
+        top: 0
+      }
+
+      .db-past {
+        position: absolute;
+        right: 10px;
+        top: 0
+      }
+    }
+
+    .dp-body {
+      table {
+        width: 100%;
+        border-collapse: collapse;
+
+        thead th {
+          padding: 6px
+        }
+
+        tbody {
+          td {
+            cursor: pointer;
+            text-align: center;
+            border-top: 1px solid $dp-border-color;
+            span { line-height: 24px }
+          }
+
+          td.dp-today {
+            background-color: $dp-today-bgcolor;
+          }
+
+          td.dp-selected, td:hover {
+            background-color: $dp-hover-bgcolor;
+            color: $dp-hover-color
+          }
+
+          td span:before {
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            content: attr(data-date)
+          }
+
+          .dp-past-month, .dp-next-month {
+            background-color: $db-not-current-month-bgcolor;
+            color: $db-not-current-month-color
+          }
+        }
+
+        thead th:not(:last-child), tbody td:not(:last-child) {
+          border-right: 1px solid $dp-border-color
+        }
+
+      }
+    }
+  }
+}
+
+.tp {
+  text-align: center;
+  max-width: 100px;
+
+  .input-fake {
+    padding: 4px 25px 6px 25px;
+    width: 100%;
+    color: #262626;
+    border: none;
+    background: #fff;
+    font-weight: 500;
+    font-size: 15px;
+    @include box-shadow(inset 0 0 0 1px #d6d6d6);
+    @include transition(all 0.15s ease-in-out);
+
+    &.focus { @include box-shadow(inset 0 0 0 1px rgba(50, 138, 214, 0.8)); }
+
+    select { width: 50px }
+    input {
+      outline: none;
+      border: 0;
+      width: 15px
+    }
+  }
+}
