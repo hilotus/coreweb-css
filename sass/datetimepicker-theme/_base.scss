@@ -2,12 +2,14 @@
 @import "compass/css3/user-interface";
 @import "compass/typography/text/ellipsis";
 
-@mixin db-datepicker($dp-border-color, $dp-color, $dp-today-bgcolor, $dp-hover-bgcolor, $dp-hover-color, $db-not-current-month-bgcolor, $db-not-current-month-color) {
+@mixin dp-datepicker($dp-border-color, $dp-color, $dp-bg-color, $dp-today-bgcolor, $dp-hover-bgcolor, $dp-hover-color, $dp-not-current-month-bgcolor, $dp-not-current-month-color) {
   .dp {
     max-width: 200px;
     color: $dp-color;
     border: 1px solid $dp-border-color;
     font-size: 12px;
+    background-color: $dp-bg-color;
+    @include user-select(none);
 
     .dp-title {
       height: 25px;
@@ -17,18 +19,15 @@
       border-bottom: 1px solid $dp-border-color;
 
       span { font-size: 13px; }
-
-      .db-next {
+      .dp-next, .dp-past {
         position: absolute;
-        left: 10px;
-        top: 0
+        top: 0;
+        cursor: pointer;
+        font-size: 14px;
+        width: 20px;
       }
-
-      .db-past {
-        position: absolute;
-        right: 10px;
-        top: 0
-      }
+      .dp-next { right: 10px; }
+      .dp-past { left: 10px; }
     }
 
     .dp-body {
@@ -64,9 +63,9 @@
             content: attr(data-date)
           }
 
-          .dp-past-month, .dp-next-month {
-            background-color: $db-not-current-month-bgcolor;
-            color: $db-not-current-month-color
+          .dp-past-date, .dp-next-date {
+            background-color: $dp-not-current-month-bgcolor;
+            color: $dp-not-current-month-color
           }
         }
 
@@ -78,6 +77,14 @@
     }
   }
 }
+
+.dp-wrapper {
+  position: relative;
+  display: inline-block;
+  button { position: relative }
+  .dp { position: absolute }
+}
+
 
 .tp {
   text-align: center;

@@ -2,10 +2,11 @@
 
 // $dp-border-color: #E8E8E8;
 // $dp-color: #3C262D;
+// $dp-bg-color: #FFF
 // $dp-today-bgcolor: #EEF6FF;
 // $dp-hover-bgcolor: #4366BC;
 // $dp-hover-color: #FFF;
-// $db-not-current-month-bgcolor: #E8E8E8;
-// $db-not-current-month-color: #B9B9B9;
+// $dp-not-current-month-bgcolor: #E8E8E8;
+// $dp-not-current-month-color: #B9B9B9;
 
-@include db-datepicker(#E8E8E8, #3C262D, #EEF6FF, #4366BC, #FFF, #E8E8E8, #B9B9B9);
+@include dp-datepicker(#E8E8E8, #3C262D, #FFF, #EEF6FF, #4366BC, #FFF, #E8E8E8, #B9B9B9);
