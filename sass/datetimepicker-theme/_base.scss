@@ -81,8 +81,15 @@
 .dp-wrapper {
   position: relative;
   display: inline-block;
-  button { position: relative }
   .dp { position: absolute }
+  .dp.invisible {
+    display: none;
+    visibility: hidden;
+  }
+  .dp.visible {
+    display: block;
+    visibility: visible;
+  }
 }
 
 
