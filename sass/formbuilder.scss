@@ -108,8 +108,8 @@
   z-index: 3;
   color: #e74c3c;
 }
-.fb-field-wrapper:hover .actions-wrapper, .fb-field-wrapper.selected .actions-wrapper {
-  display: block;
+.fb-field-wrapper:hover>.subtemplate-wrapper, .fb-field-wrapper.selected>.subtemplate-wrapper {
+  &>.actions-wrapper { display: block }
 }
 
 .fb-edit-field-wrapper {
@@ -169,7 +169,7 @@
     abbr { color: #f00 }
   }
 
-  &:hover .subtemplate-wrapper {
+  &:hover>.subtemplate-wrapper {
     border-color: #ddd;
     border-radius: 3px
   }
