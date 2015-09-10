@@ -85,7 +85,6 @@
 }
 
 .fb-field-wrapper {
-  cursor: pointer;
   display: inline-block;
   width: 48.5%;
   margin-right: 5px;
@@ -158,7 +157,8 @@
       left: 0;
       height: 100%;
       width: 100%;
-      z-index: 2
+      z-index: 2;
+      cursor: pointer
     }
     .title {
       padding-bottom: 10px;
@@ -180,4 +180,6 @@
     margin: 0;
     border-radius: 3px;
   }
+
+  &.form-foeld-section .title { cursor: pointer }
 }
