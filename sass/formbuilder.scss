@@ -5,10 +5,19 @@
 @import "normalize";
 
 .fb-main {
+  position: relative;
   background-color: #fff;
   border-radius: 5px;
   min-height: 600px;
-  @include user-select(none)
+  @include user-select(none);
+
+  .fb-main-top-bar {
+    position: absolute;
+    text-align: right;
+    height: 60px;
+    top: 10px;
+    right: 10px;
+  }
 }
 
 .fb-main .del {
@@ -181,5 +190,17 @@
     border-radius: 3px;
   }
 
-  &.form-field-section .title { cursor: pointer }
+  &.form-field-section {
+    position: relative;
+
+    .title { cursor: pointer }
+
+    .top-bar {
+      position: absolute;
+      text-align: right;
+      height: 60px;
+      top: 10px;
+      right: 10px;
+    }
+  }
 }
