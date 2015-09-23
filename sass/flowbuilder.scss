@@ -1,0 +1,122 @@
+@import "compass/css3";
+@import "compass/css3/user-interface";
+@import "compass/typography/text/ellipsis";
+
+@import "normalize";
+
+.flow-builder-main {
+  position: relative;
+  background-color: #fff;
+  border-radius: 5px;
+  min-height: 600px;
+  @include user-select(none);
+
+  .flow-builder-main-top-bar {
+    position: absolute;
+    text-align: right;
+    height: 60px;
+    top: 10px;
+    right: 10px;
+  }
+}
+
+.flow-builder-main .del {
+  cursor: pointer;
+  color: #e74c3c;
+}
+
+.flow-builder-clear {
+  clear: both
+}
+
+.flow-builder-left {
+  float: left;
+  width: 320px;
+  padding-top: 30px
+}
+
+.flow-builder-right {
+  padding-top: 70px;
+  margin-left: 320px;
+  border-left: 1px solid #ddd;
+  padding-left: 20px;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.flow-builder-tabs {
+  list-style: none;
+  margin: 0 0 20px 0;
+  padding: 0 0 0 20px;
+  border-bottom: 1px solid #ccc;
+
+  li {
+    display: inline-block;
+    a {
+      display: block;
+      padding: 10px;
+      border-radius: 5px 5px 0 0;
+      font-size: 13px;
+      cursor: pointer;
+      border-left: 1px solid transparent;
+      border-right: 1px solid transparent
+    }
+  }
+  li.active a {
+    border: 1px solid #ccc;
+    margin-bottom: -1px;
+    border-bottom-color: #fff
+  }
+}
+
+.flow-builder-tab-content {
+  .flow-builder-tab-pane {
+    padding: 0 20px;
+    display: none;
+    &.active { display: block }
+  }
+
+  .flow-builder-tab-pane .flow-builder-add-field-types {
+    .btn {
+      display: inline-block;
+      width: 48.5%;
+      margin-bottom: 9px
+    }
+    .section {
+      padding-bottom: 5px;
+      margin-bottom: 20px
+    }
+  }
+}
+
+.flow-builder-edit-field-wrapper {
+  font-size: 13px;
+
+  .flow-builder-edit-section-header {
+    border-bottom: 1px solid #ddd;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    clear: both;
+    font-weight: 700;
+  }
+
+  .flow-builder-field-label {
+    font-weight: normal;
+    background: #eee;
+    padding: .75em;
+    color: #666;
+    font-size: 1.25em;
+
+    .field-type, .field-name {
+      margin-top: .5em;
+      display: block;
+      font-size: 1em;
+      @include user-select(text);
+      &:before { color: #999 }
+    }
+
+    .field-type:before { content: 'Type: ' }
+    .field-name:before { content: 'Name: ' }
+  }
+}

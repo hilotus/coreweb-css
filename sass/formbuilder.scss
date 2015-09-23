@@ -4,14 +4,14 @@
 
 @import "normalize";
 
-.fb-main {
+.form-builder-main {
   position: relative;
   background-color: #fff;
   border-radius: 5px;
   min-height: 600px;
   @include user-select(none);
 
-  .fb-main-top-bar {
+  .form-builder-main-top-bar {
     position: absolute;
     text-align: right;
     height: 60px;
@@ -20,22 +20,22 @@
   }
 }
 
-.fb-main .del {
+.form-builder-main .del {
   cursor: pointer;
   color: #e74c3c;
 }
 
-.fb-clear {
+.form-builder-clear {
   clear: both
 }
 
-.fb-left {
+.form-builder-left {
   float: left;
   width: 320px;
   padding-top: 30px
 }
 
-.fb-right {
+.form-builder-right {
   padding-top: 70px;
   margin-left: 320px;
   border-left: 1px solid #ddd;
@@ -44,7 +44,7 @@
   overflow: hidden;
 }
 
-.fb-tabs {
+.form-builder-tabs {
   list-style: none;
   margin: 0 0 20px 0;
   padding: 0 0 0 20px;
@@ -69,14 +69,14 @@
   }
 }
 
-.fb-tab-content {
-  .fb-tab-pane {
+.form-builder-tab-content {
+  .form-builder-tab-pane {
     padding: 0 20px;
     display: none;
     &.active { display: block }
   }
 
-  .fb-tab-pane .fb-add-field-types {
+  .form-builder-tab-pane .form-builder-add-field-types {
     .btn {
       display: inline-block;
       width: 48.5%;
@@ -89,26 +89,26 @@
   }
 }
 
-.fb-no-response-fields {
+.form-builder-no-response-fields {
   color: #999
 }
 
-.fb-field-wrapper {
+.form-builder-field-wrapper {
   display: inline-block;
   width: 48.5%;
   margin-right: 5px;
   position: relative;
   margin-bottom: 20px
 }
-.fb-field-wrapper.selected {
+.form-builder-field-wrapper.selected {
   background-color: #ecf0f1;
   border-radius: 3px;
 }
-.fb-field-wrapper.whole-line {
+.form-builder-field-wrapper.whole-line {
   display: block;
   width: 97%
 }
-.fb-field-wrapper .actions-wrapper {
+.form-builder-field-wrapper .actions-wrapper {
   display: none;
   position: absolute;
   top: -5px;
@@ -116,14 +116,14 @@
   z-index: 3;
   color: #e74c3c;
 }
-.fb-field-wrapper:hover>.subtemplate-wrapper, .fb-field-wrapper.selected>.subtemplate-wrapper {
+.form-builder-field-wrapper:hover>.subtemplate-wrapper, .form-builder-field-wrapper.selected>.subtemplate-wrapper {
   &>.actions-wrapper { display: block }
 }
 
-.fb-edit-field-wrapper {
+.form-builder-edit-field-wrapper {
   font-size: 13px;
 
-  .fb-edit-section-header {
+  .form-builder-edit-section-header {
     border-bottom: 1px solid #ddd;
     margin-top: 25px;
     margin-bottom: 10px;
@@ -132,7 +132,7 @@
     font-weight: 700;
   }
 
-  .fb-field-label {
+  .form-builder-field-label {
     font-weight: normal;
     background: #eee;
     padding: .75em;
@@ -152,7 +152,7 @@
   }
 }
 
-.fb-field-wrapper {
+.form-builder-field-wrapper {
   vertical-align: top;
 
   .subtemplate-wrapper {
