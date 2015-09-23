@@ -1,0 +1,61 @@
+@import 'base';
+
+.date-picker-mobile {
+  .modal > .outer > .middle > .inner {
+    width: 300px;
+
+    .modal-body {
+      @include user-select(none);
+
+      .date-picker-header {
+        text-align: center;
+        color: #333;
+        text-shadow: 0 1px 0 #f3f3f3;
+      }
+
+      .date-picker-year, .date-picker-month, .date-picker-date {
+        float: left;
+        width: 32%;
+        margin: 0 1px 0 1px;
+        background-color: #f6f6f6;
+        border-color: #ddd;
+        color: #333;
+        @include border-radius(8px);
+        @include text-shadow(0 1px 0 #f3f3f3)
+      }
+
+      .button-plus, .button-minus {
+        cursor: pointer;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        &:active { background-color: #c6c6c6 }
+      }
+
+      .button-plus:active {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+      }
+
+      .button-minus:active {
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+      }
+
+      .span-value {
+        height: 25px;
+        line-height: 25px;
+        text-align: center;
+
+        input {
+          display: inline-block;
+          width: 50%;
+          text-align: center
+        }
+      }
+    }
+
+    .modal-footer {
+    }
+  }
+}
