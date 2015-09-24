@@ -5,14 +5,12 @@
 @import "normalize";
 
 .flow-builder-main {
-  position: relative;
   background-color: #fff;
   border-radius: 5px;
   min-height: 600px;
   @include user-select(none);
 
   .flow-builder-main-top-bar {
-    position: absolute;
     text-align: right;
     height: 60px;
     top: 10px;
@@ -89,7 +87,7 @@
   }
 }
 
-.flow-builder-edit-field-wrapper {
+.flow-builder-edit-step-wrapper {
   font-size: 13px;
 
   .flow-builder-edit-section-header {
@@ -101,22 +99,106 @@
     font-weight: 700;
   }
 
-  .flow-builder-field-label {
+  .flow-builder-step-label {
     font-weight: normal;
     background: #eee;
     padding: .75em;
     color: #666;
     font-size: 1.25em;
 
-    .field-type, .field-name {
+    .step-type, .step-name {
       margin-top: .5em;
       display: block;
-      font-size: 1em;
+      font-size: .8em;
       @include user-select(text);
       &:before { color: #999 }
     }
 
-    .field-type:before { content: 'Type: ' }
-    .field-name:before { content: 'Name: ' }
+    .step-type:before { content: 'Type: ' }
+    .step-name:before { content: 'Name: ' }
+  }
+}
+
+.flow-builder-board {
+  position: relative;
+
+  .flow-builder-step {
+    position: absolute;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid green;
+    background-color: #eee;
+
+    &.selected { border: 1px solid #d9e1e3 }
+    .step-title {}
+
+    .del {
+      position: absolute;
+      display: none;
+      right: -6px;
+      top: -6px;
+      font-size: 14px;
+    }
+
+    &:hover, &.selected {
+      .del { display: block }
+    }
+  }
+
+  .flow-step-start, .flow-step-end {
+    width: 120px;
+    height: 60px;
+    line-height: 60px;
+    -moz-border-radius: 100px / 50px;
+    -webkit-border-radius: 100px / 50px;
+    border-radius: 100px / 50px;
+  }
+
+  .flow-step-process, .flow-step-condition {
+    width: 120px;
+    height: 60px;
+    line-height: 60px;
+  }
+
+  .flow-step-line-hover {
+    border: 1px dotted red
+  }
+
+  .flow-step-line-active {
+    border: 1px dotted green
+  }
+
+  .flow-step-line-title {
+    background-color: white;
+    padding: 0.4em;
+    font: 12px sans-serif;
+    color: #444;
+    z-index: 21;
+    border: 1px dotted gray;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    cursor: pointer;
+  }
+
+  .flow-step-line-title._jsPlumb_hover {
+    background-color: #5C96BC;
+    color: white;
+    border: 1px solid white;
+  }
+
+  ._jsPlumb_connector {
+    z-index: 4;
+  }
+
+  .jsplumb-drag {
+    border: 2px solid pink !important
+  }
+
+  ._jsPlumb_endpoint {
+    cursor: pointer
+  }
+
+  ._jsPlumb_overlay {
+    background-color: transparent
   }
 }
