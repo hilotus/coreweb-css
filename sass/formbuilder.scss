@@ -148,8 +148,7 @@
       &:before { color: #999 }
     }
 
-    .field-type:before { content: 'Type: ' }
-    .field-name:before { content: 'Name: ' }
+    .field-type:before, .field-name:before { content: attr(data-field) }
   }
 }
 
