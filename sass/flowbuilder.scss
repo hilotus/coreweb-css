@@ -114,8 +114,7 @@
       &:before { color: #999 }
     }
 
-    .step-type:before { content: 'Type: ' }
-    .step-name:before { content: 'Name: ' }
+    .step-type:before, .step-name:before { content: attr(data-step) }
   }
 }
 
