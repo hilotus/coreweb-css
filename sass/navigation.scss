@@ -145,7 +145,10 @@ $navigatable-width: 600px;
 
                 /* delete row */
                 &.delete-row {
-                  &>.left { width: 85% }
+                  &>.left {
+                    text-align: left;
+                    width: 85%
+                  }
                   &>.right {
                     text-align: right;
                     width: 20px
