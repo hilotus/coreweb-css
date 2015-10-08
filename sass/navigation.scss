@@ -133,7 +133,7 @@ $navigatable-width: 600px;
                 input:disabled, textarea:disabled { background-color: #E3E3E3 }
 
                 /* descript row, update row, select row */
-                &.descript-row, &.update-row, &.select-row {
+                &.descript-row, &.update-row, &.select-option-row {
                   &>.right { color: #167efb }
                 }
 
@@ -168,7 +168,8 @@ $navigatable-width: 600px;
                   }
                 }
 
-                &.click-row, &.update-row, &.delete-row, &.button-row, &.select-row { cursor: pointer }
+                &.click-row, &.update-row, &.delete-row, &.button-row, &.select-option-row { cursor: pointer }
+                &.update-row, &.delete-row { text-align: center }
               }
             }
 
