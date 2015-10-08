@@ -92,7 +92,7 @@ $navigatable-width: 600px;
             }
 
             .rows {
-              &>.row {
+              .row {
                 position: relative;
                 height: $row-hight;
                 line-height: $row-hight;
@@ -110,7 +110,7 @@ $navigatable-width: 600px;
                 &>.right { right: 5px }
                 input, textarea {
                   display: inline-block;
-                  width: 99%;
+                  width: 95%;
                   outline: none;
                   margin-top: 5px;
                   padding: 0 7px;
