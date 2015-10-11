@@ -92,7 +92,7 @@ $navigatable-width: 600px;
             }
 
             .rows {
-              .row {
+              &>.row {
                 position: relative;
                 height: $row-hight;
                 line-height: $row-hight;
@@ -110,7 +110,7 @@ $navigatable-width: 600px;
                 &>.right { right: 5px }
                 input, textarea {
                   display: inline-block;
-                  width: 95%;
+                  width: 100%;
                   outline: none;
                   margin-top: 5px;
                   padding: 0 7px;
@@ -120,7 +120,8 @@ $navigatable-width: 600px;
                   border: 1px solid #c6c6c6;
                   border-top-color: #bbb;
                   border-radius: 3px;
-                  @include box-shadow(inset 0 1px 1px rgba(0,0,0,0.06),0 1px rgba(255,255,255,0.4))
+                  @include box-shadow(inset 0 1px 1px rgba(0,0,0,0.06),0 1px rgba(255,255,255,0.4));
+                  @include box-sizing(border-box)
                 }
                 input:focus, textarea:focus {
                   color: #404040;
@@ -144,7 +145,7 @@ $navigatable-width: 600px;
                 &.input-row { text-align: center }
 
                 /* delete row */
-                &.delete-row {
+                &.collection-item-row {
                   &>.left {
                     text-align: left;
                     width: 85%
@@ -165,14 +166,15 @@ $navigatable-width: 600px;
                   color: #167efb;
 
                   &:active { color: #094e96 }
+                  &.delete { color: #ea4335 }
                   &.disabled {
                     cursor: not-allowed;
                     color: #dadada
                   }
                 }
 
-                &.click-row, &.update-row, &.delete-row, &.button-row, &.select-option-row { cursor: pointer }
-                &.update-row, &.delete-row { text-align: center }
+                &.click-row, &.update-row, &.collection-item-row, &.button-row, &.select-option-row { cursor: pointer }
+                &.update-row, &.collection-item-row { text-align: center }
               }
             }
 
